@@ -25,7 +25,7 @@ int main() {
 	string iname;
 
 	// opens and parses items and units from the Tft.json file
-	ifstream file("Resources/Tft.json");
+	ifstream file("Resources/Tftnew.json");
 	json j;
 	file >> j;
 
@@ -85,8 +85,9 @@ int main() {
 		}
 
 		item[name].SetNAME(name);
+		
 	}
-
+	cout << "finished parsing items" << endl;
 	// parses champion data to get stats
 	for (json& o : j["setData"]) {
 		for (auto& champ : o["champions"]) {
@@ -148,16 +149,17 @@ int main() {
 			champion[name].SetAD(damage);
 			champion[name].SetNAME(name);
 		}
+		cout << "finished parsing champions" << endl;
 	}
 
-	/*champion["Zyra"].Set_Item_List(item["Deathblade"]);
-	champion["Zyra"].Set_Item_List(item["Riskthirster"]);
-	champion["Zyra"].Set_Item_List(item["Bramble Vest"]);
-	champion["Udyr"].Set_Item_List(item["Bramble Vest"]);
-	champion["Zyra"].Set_Item_List(item["Chalice of Malice"]);
-	champion["Zyra"].Basic_Fight(champion["Rell"]);*/
+	champion["Samira"].Set_Item_List(item["Infinity Edge"]);
+	//champion["Zyra"].Set_Item_List(item[""]);
+	//champion["Zyra"].Set_Item_List(item["Bramble Vest"]);
+	//champion["Udyr"].Set_Item_List(item["Bramble Vest"]);
+	//champion["Zyra"].Set_Item_List(item["Chalice of Malice"]);
+	//champion["Zyra"].Basic_Fight(champion["Rell"]);
 
-	//champion[""].Basic_Fight(champion["Rell"]);
+	champion["Samira"].Basic_Fight(champion["Ashe"]);
 
 	return 0;
 }

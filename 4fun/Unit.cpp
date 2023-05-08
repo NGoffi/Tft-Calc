@@ -93,7 +93,7 @@ float Unit::DPS() {
 	float new_csc = csc;
 
 	for (Item i : item_list) {
-		new_ad += i.ad;
+		new_ad += (i.ad*ad) ;
 		new_aps += i.aps;
 		new_csc += i.csc;
 	}

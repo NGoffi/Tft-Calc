@@ -1346,21 +1346,23 @@
       "unique": false
     },
     {
-      "desc": "Grants @CritChance@% Critical Strike Chance (including components) and @BonusCritDamage@% Critical Strike Damage. Each point of Critical Strike Chance above 100% becomes +@BonusCritDmgPerCritAbove100@% Critical Strike Damage. <br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-      "effects": {
-        "AD": 10.0,
-        "CritChance": 75.0,
-        "{45c7ed6b}": 1.0,
-        "{d34ac151}": 10.0
-      },
-      "from": [
-        1,
-        9
+      "apiName": "TFT_Item_InfinityEdge",
+      "associatedTraits": [],
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_SparringGloves"
       ],
-      "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Infinity_Edge.dds",
-      "id": 19,
+      "desc": "Damage from an Ability can critically strike.",
+      "effects": {
+        "AD": 0.30000001192092896,
+        "CritChance": 35.0
+      },
+      "from": null,
+      "icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Infinity_Edge.tex",
+      "id": null,
+      "incompatibleTraits": [],
       "name": "Infinity Edge",
-      "unique": true
+      "unique": false
     },
     {
       "desc": "Reduces the Attack Speed of enemies within @HexRadius@ hexes by @AttackSpeedSlow@%.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
